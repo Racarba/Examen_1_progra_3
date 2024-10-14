@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recolección de Residuos para Reciclaje</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Recolección de Residuos para Reciclaje</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#datos">Datos</a></li>
+                <li><a href="#clasificacion">Clasificación de Residuos</a></li>
+                <li><a href="#calculadora">Calculadora Ecologica</a></li>
+                <li><a href="#Retroalimentacion">Preguntas y Respuestas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de datos -->
+
+ <section id="datos">
+    <h2>Ingresa tus Datos</h2>
+    <form id="datos">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre" required>
+        <br>
+        <br>
+        <label for="edad">Ingresa tu edad:</label>
+        <input type="number" id="edad" name="number" required>
+        <br>
+        <br>
+        <label>País</label>
+        <select name="pais" id="pais" required="required">
+          <option value="" selected="selected">Selecciona un país</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Honduras">Honduras</option>
+          <option value="Guatemala">Guatemala</option>
+          <option value="Costa Rica">Costa Rica</option>
+          <option value="Panamá">Panamá</option>
+          <option value="Colombia">Colombia</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Chile">Chile</option>
+        </select>
+        <br>
+        <br>
+        <button type="button" onclick="imprimir()">FINALIZAR</button>
+    </form>
+    
+    
+    <p class="datos" id="parrafo1"></p><p class="datos" id="parrafo2"></p><p class="datos" id="parrafo3"></p>
+
+</section>
+
+<section id="calculadora">
+    <h2>Calculadora Ecológica</h2>
+    <form id="calculadora">
+        <label for="reciclados">Ingrese la cantidad en kilogramos reciclados:</label>
+        <input type="number" id="cantidad" name="reciclados" placeholder="kilogramos" required>
+  
+        <button type="button" onclick="calcularImpacto()">CALCULAR</button>
+    </form>
+    <br>
+    <img src="ambiente.png" width="480" height="230">
+ 
+    <p class="datos1" id="pcalc"></p>
+
+</section>
+
+    <!-- Sección de Clasificación Interactiva -->
+
+    <section id="clasificacion">
+        <h2>Clasifica tus Residuos</h2>
+        <p>Arrastra los residuos al contenedor correspondiente:</p>
+        <div class="residuos">
+            <img src="botella_vidrio.jpg" alt="Vidrio" class="draggable" draggable="true">
+            <img src="organico1.jpg" alt="Organico" class="draggable" draggable="true">
+            <img src="botella_plastico.jpg" alt="Plastico" class="draggable" draggable="true">
+            <img src="papel1.jpg" alt="Papel" class="draggable" draggable="true">
+            
+            <!-- Más imágenes de residuos -->
+        </div>
+        <div class="contenedores">
+            <div class="contenedor" data-tipo="plastico"><img src="plastico.jpg" class="img1"></div>
+            <div class="contenedor" data-tipo="vidrio"><img src="vidrio.jpg" class="img1"></div>
+            <div class="contenedor" data-tipo="papel"><img src="papel.jpg" class="img1"></div>
+            <div class="contenedor" data-tipo="organico"><img src="organico.jpg" class="img1"></div>
+        </div>
+        <p id="mensaje-resultado"></p>
+    </section>
+
+    <!-- Retroalimentacion -->
+
+    <section id="Retroalimentacion">
+        <header>
+            <h1>Preguntas y Respuestas</h1>
+            <nav>
+                <ul>
+                    <li><a href="#¿Qué es un residuo?">¿Qué es un residuo?</a></li>
+                    <li><a href="#¿Cómo se componen los residuos de un hogar?">¿Cómo se componen los residuos de un hogar?</a></li>
+                    <li><a href="#¿Qué son las 5Rs?">¿Qué son las 5Rs?</a></li>
+                    <li><a href="#¿Por qué el plástico es un problema?">¿Por qué el plástico es un problema?</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <main>
+        <section id="¿Qué es un residuo?">
+            <article>
+                <h2>¿Qué es un residuo?</h2>
+                <p>Un residuo es aquello que pierde utilidad tras haber cumplido con su misión o servido para realizar un determinado trabajo.</p>
+            </article>
+                <img src="residuo.jpg" width="320" height="240" alt="Imagen de residuos">         
+        </section>
+
+        <section id="¿Cómo se componen los residuos de un hogar?">
+            <article>
+                <h2>¿Cómo se componen los residuos de un hogar?</h2>
+                <p>Aproximadamente el 50% de los residuos de nuestras casas son orgánicos, el 35% restante son reciclables y el último 15% es basura. 
+
+                    Dentro de los residuos orgánicos están los restos de comida, cáscaras de fruta y verdura, de huevo, café, yerba o té, etc. En el grupo de los reciclables encontramos plástico, papel y cartón, vidrio y metales, mayoritariamente correspondientes a packaging. En el 15% considerado basura, entran aquellos residuos que no pueden compostarse ni reciclarse. </p>
+            </article>
+                <img src="hogar.jpg" width="320" height="240" alt="Imagen de residuos">         
+        </section>
+
+        <section id="¿Qué son las 5Rs?">
+            <article>
+                <h2>¿Qué son las 5Rs?</h2>
+                <p>Las 5Rs nos guían hacia una vida de menor desperdicio. Esta es una jerarquía de necesidades del planeta, que cada uno de nosotros puede poner en práctica para su bienestar.
+
+                    Rechazar: todo aquello que, en realidad, no necesitamos.
+                    <br>
+                    <br>
+                    Reducir: lo que no se necesita. 
+                    <br>
+                    <br>
+                    Reutilizar: se trata de sustituir los productos desechables por los productos reutilizables. 
+                    <br>
+                    <br>
+                    Reciclar: todo aquello que no ha podido pasar por los filtros anteriores.
+                    <br>
+                    <br>
+                    Rot (Compostar): los residuos orgánicos que quedan.</p>
+            </article>
+                <img src="rrr.png" width="320" height="240" alt="Imagen de residuos"> 
+        </section>  
+                
+        <section id="¿Por qué el plástico es un problema?">
+            <article>
+                <h2>¿Por qué el plástico es un problema?</h2>
+                <p>El plástico es un material proveniente del petróleo que trajo muchos beneficios, como también muchos problemas. Si bien su surgimiento brindó muchas soluciones, el uso y abuso que le dimos las personas al material lo convirtieron en un gran problema que llenó de contaminación ecosistemas enteros, y hasta nuestra propia sangre. 
+
+                            El problema del plástico es que es un material muy duradero, que se utiliza mayormente para objetos que están hechos para durar apenas unos minutos, como sorbetes, vasos y botellas descartables o packaging.</p>
+            </article>
+                    <img src="plast.webp" width="320" height="240" alt="Imagen de residuos">
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
